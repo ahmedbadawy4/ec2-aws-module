@@ -1,4 +1,4 @@
-# ecs-aws-module
+# ec2-aws-module
 module to deploy ec2 in aws
 #### Table of Contents
 1. [Usage](#usage)
