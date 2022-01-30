@@ -19,7 +19,7 @@ resource "aws_instance" "terratest" {
   key_name      = aws_key_pair.terra-test.key_name
   metadata_options {
     http_tokens = "required"
-    http_endpoint = "disable" 
+    http_endpoint = "disabled" 
   }
   root_block_device {
     volume_size           = var.volume_size
