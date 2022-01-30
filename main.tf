@@ -18,13 +18,13 @@ resource "aws_instance" "terratest" {
   instance_type = var.instance_type
   key_name      = aws_key_pair.terra-test.key_name
   metadata_options {
-    http_tokens = "required"
-    http_endpoint = "disabled" 
+    http_tokens = var.metadata_http_tokens
+    http_endpoint = var.metadata_http_endpoint 
   }
   root_block_device {
     volume_size           = var.volume_size
     delete_on_termination = var.volume_protection
-    encrypted             = true
+    encrypted             = var.volume_encryption
   }
   tags = local.aws_tags
 }

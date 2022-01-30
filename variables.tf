@@ -28,3 +28,15 @@ variable "region" {
 variable "environment" {
   default = ""
 }
+
+variable "volume_encryption" {
+  default = "true"
+}
+
+variable "metadata_http_endpoint " {
+  default = "enabled"
+}
+
+variable "metadata_http_tokens " {
+  default = "required"
+}
